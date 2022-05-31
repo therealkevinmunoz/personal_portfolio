@@ -1,0 +1,87 @@
+/* 1. Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+}
+
+/* 2. Navigation Bar*/
+nav {
+    margin-bottom: 50px;
+    margin-left: -10px;
+    padding: 5px;
+    box-shadow: 0 5px 10px #cccccc;
+    background-color: #336699;
+    width: 100%;
+}
+
+nav li{
+    list-style: none;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px
+}
+
+.links {
+    text-decoration: none;
+    color: #fff;
+}
+
+.links:hover {
+    color:  #CCFF00;
+}
+
+/* 3. Selections  */
+
+.main-selection {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.selection-container {
+    box-shadow: 0 0 10px #cccccc;
+    width: 30%;
+    border-radius: 1em;
+    padding: 40px;
+}
+
+.selection-container:hover {
+    box-shadow: 0 0 15px #6699FF;
+    transform: scale(1.02);
+}
+
+.selection-title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    color: #336699;
+}
+
+.selection-description {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+}
+
+/* 4. Footer */
+
+footer {
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+}
+
+.social-icons img{
+    width: 25px;
+}
