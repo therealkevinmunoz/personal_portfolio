@@ -1,0 +1,48 @@
+/* 1. Page */
+
+.about-me {
+    background-image: url("../images/tertiary-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 700px;
+}
+
+/* 2. Fonts */
+
+.about-me h1 {
+    color: #fff;
+}
+
+.about-me-content {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-self: center;
+    height: auto;
+}
+
+.about-me div {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 50px;
+    margin: 10px;
+    background-color: #fff;
+}
+
+/* 3. Buttons */
+
+.about-me .cta-primary
+{
+    align-self: flex-end;
+    background-color: #fff;
+    color: #336699;
+}
+
+.about-me .cta-primary:hover {
+    border: solid 1px #fff;
+    background-color: transparent;
+    color: #fff;
+}
