@@ -24,10 +24,11 @@
     height: auto;
 }
 
-.about-me div {
+.about-me-content,
+.featured-content {
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 50px;
+    padding: 20px;
     margin: 10px;
     background-color: #fff;
 }
@@ -45,4 +46,60 @@
     border: solid 1px #fff;
     background-color: transparent;
     color: #fff;
+}
+
+/* 4. Featured Articles */
+
+.featured-container {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.featured-container a:hover {
+    transform: scale(1.02);
+}
+
+.article {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: .75em;
+    background-color: #fbfcff;
+}
+
+.article-image-1 {
+    background-image: url("https://media-exp1.licdn.com/dms/image/sync/C4E27AQFFt03CAxcXSQ/articleshare-shrink_800/0/1655207021315?e=1656478800&v=beta&t=DgERPJZdrHBsilMrvdtcl_9Dr0atU8DF4sNBRHezIeU");
+    background-size: cover;
+}
+
+
+.article-image-2 {
+    background-image: url("https://news.colby.edu/wp-content/uploads/2021/09/banerjee-Strange_IDmission_14.jpg");
+    background-size: cover;
+}
+
+.article-image-1,
+.article-image-2 {
+    color: #fff;
+    border-radius: .75em 0 0 .75em;
+    width: 100%;
+}
+
+.article-title {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color:unset;
+}
+
+.article-description {
+    padding: 20px;
+}
+
+/* 5. Images */
+
+#about-me-personal-img{
+    max-width: 300px;
 }
