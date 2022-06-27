@@ -175,11 +175,11 @@ a .selection-container {
     padding: 10px;
     border-radius: .75em;
     font-size: 14px;
+    font-weight: 700;
 }
 
-button {
+.cta-secondary:hover {
     cursor: pointer;
-    font-weight: 700;
 }
 
 /* 5. Form */
@@ -235,4 +235,11 @@ label {
 textarea {
     font-family:'Nunito', sans-serif;
     resize: none;
+}
+
+.email-thankyou {
+    display: none;
+    align-self: flex-start;
+    padding: 4em;
+    
 }

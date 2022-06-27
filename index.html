@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="./styles/styles.css" />
         <title>Kevin's Portfolio</title>
+        <script type="text/javascript" src="./script/script.js" async></script>
     </head>
 
     <body>
@@ -52,7 +53,7 @@
 
         <div class="contact-me-form">
             <h1>Contact Me</h1>
-            <form class="contact-me">
+            <form class="contact-me" name="contactme">
                 <div class="form-contact-info">
                     <label for="fname">First Name</label>
                     <input id="fname" name="fname" type="text" required>
@@ -64,9 +65,21 @@
                 <div class="form-content">
                     <label for="email-content"></label>
                     <textarea id="email-content" name="email-content" rows="10" cols="60" placeholder="Type your message here" required></textarea>
-                    <button type="submit" class="cta-secondary">Send</button>
+                    <input type="submit" class="cta-secondary" value="Send">
                 </div>
             </form>
+            <div class="email-thankyou">
+                <h3>Thank you!</h3>
+                <br>
+                <p>Kevin will contact you within 1-2 days.</p>
+            </div>
         </div>
     </body>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function(){
+               emailjs.init("rr0zJWHaB5vyltbnL");
+            })();
+         </script>
 </html>
