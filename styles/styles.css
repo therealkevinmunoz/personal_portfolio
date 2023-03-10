@@ -1,32 +1,52 @@
 /* 1. Fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap');
+
+:root {
+    --page-font: 'Jost', sans-serif;
+    --light-weight: 300;
+    --regular-weight: 400;
+    --bold-weight: 500;
+    --extra-bold-weight: 600;
+    --gray: #F3F4F8;
+    --green: #02eb41;
+    --dark-gray: #404252;
+    --white: #FFF;
+}
 
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: var(--page-font);
     margin: 0;
 
 }
 
-h1.banner-title,
-.contact-me-form h1{
-    color: #fff;
+h1  {
+    font-weight: var(--light-weight);
+}
+
+h1.banner-title {
+    color: var(--dark-gray);
+    font-weight: var(--regular-weight);
+}
+
+
+
+.contact-me-form h1 {
+    color: var(--gray);
 }
 
 h1 {
     margin: 0;
-    color: #336699;
+    color: var(--dark-gray);
     font-size: 2em;
 }
 
 .add-links h1 {
-    color:#336699;
-    text-align: center;
-    padding: 20px;
+    color: var(--dark-gray);
 }
 
 button {
-    font-family: 'Nunito', sans-serif;
+    font-family: var(--page-font);
 }
 
 /* 2. Navigation Bar*/
@@ -34,14 +54,14 @@ nav {
     margin-left: -10px;
     padding: 5px;
     box-shadow: 0 5px 10px #cccccc;
-    background-color: #336699;
+    background-color: var(--dark-gray);
     width: 100%;
 }
 
 nav li{
     list-style: none;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 400;
+    font-family: var(--page-font);
+    font-weight: var(--light-weight);
     font-size: 16px;
 }
 
@@ -53,11 +73,11 @@ nav ul {
 .links {
     position: relative;
     text-decoration: none;
-    color: #fff;
+    color: var(--white);
 }
 
 .links:hover {
-    color: #fff;
+    color: var(--white);
 }
 
 .links::before {
@@ -68,7 +88,7 @@ nav ul {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #fff;
+    background-color: var(--white);
     transform: scaleX(0);
     transform-origin: top left;
     transition: transform 0.2s ease;
@@ -82,63 +102,61 @@ nav ul {
 /* 3. Banners */
 
 .banner {
-    background-image: url("../images/landing-page-banner.png");
-    background-size: cover;
-    height: 700px;
-    background-repeat: no-repeat;
+    background-color: var(--gray);
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding-left: 5em;
+    justify-content: center;
+    align-items: center;
 }
 
 /* 4. Selections  */
 
 .add-links {
-    padding-top: 20px;
-    background-image: url("../images/secondary-background.png");
-    background-size: cover;
-    height: 700px;
-    background-repeat: no-repeat;
+    padding: 20px;
+    background-color: var(--gray);
+}
+
+.add-links .main-selection {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .main-selection {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 40px;
     margin-left: 10%;
     margin-right: 10%;
     text-align: center;
-    
+    height: 500px;
 }
 
 .selection-container {
-    box-shadow: 0 0 10px #cccccc;
-    max-width: 200px;
+    max-width: 150px;
     border-radius: 1em;
     padding: 30px;
-    background-color: #fff;
+    background-color: var(--white);
+    border: 1px solid var(--dark-gray);
 }
 
 .selection-container:hover {
-    box-shadow: 0 0 15px #6699FF;
-    transform: scale(1.02);
+    box-shadow: 0 0 5px var(--dark-gray);
     cursor: pointer;
 }
 
 .selection-title {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 900;
-    color: #336699;
+    font-family: var(--page-font);
+    font-weight: var(--regular-weight);
+    color: var(--dark-gray);
     font-size: 24px;
 }
 
 .selection-description {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 400;
+    font-family: var(--page-font);
+    font-weight: var(--light-weight);
     font-size: 18px;
 }
 
@@ -153,6 +171,7 @@ a .selection-container {
 /* 4.Buttons */
 
 .cta-primary {
+    display: none;
     border: solid 1px #fff;
     background-color: transparent;
     color: #fff;
@@ -165,17 +184,17 @@ a .selection-container {
 
 .cta-primary:hover {
     background-color: #fff;
-    color: #336699;
+    color: var(--green);
 }
 
 .cta-secondary {
     width: 50%;
-    background-color: #FFDE59;
-    border: 1px solid #FFBD59;
+    background-color: var(--green);
+    border: 1px solid var(--green);
     padding: 10px;
     border-radius: .75em;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: var(--regular-weight);
 }
 
 .cta-secondary:hover {
@@ -185,25 +204,22 @@ a .selection-container {
 /* 5. Form */
 
 .contact-me-form {
-    background-color: #29436B;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    background-color: var(--dark-gray);
+    padding: 20px;
 }
 
-.contact-me-form h1 {
-    text-align: center;
-}
-
-.contact-me {
+.contact-me-form section {
     display: flex;
     gap: 100px;
     justify-content: center;
-    background-color: #fff;
-    padding: 4em;
+}
+
+.contact-me {
+    background-color: var(--gray);
+    padding: 30px;
     border-radius: .75em;
+    max-width: 80%;
+    width: 80%;
 }
 
 .form-contact-info {
@@ -229,11 +245,11 @@ form .cta-secondary {
 }
 
 label {
-    font-weight: 700;
+    font-weight: var(--regular-weight);
 }
 
 textarea {
-    font-family:'Nunito', sans-serif;
+    font-family:var(--page-font);
     resize: none;
 }
 
@@ -242,4 +258,78 @@ textarea {
     align-self: flex-start;
     padding: 4em;
     
+}
+
+/* PROJECTS SECTION */
+.my-projects {
+    background-color: var(--dark-gray);
+    padding: 20px;
+}
+
+/* 2. Fonts */
+
+.my-projects h1 {
+    color: var(--gray);
+}
+
+.my-projects section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-content {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    background-color: var(--white);
+    max-width: 80%;
+}
+
+/* 3. Buttons */
+
+.my-projects .cta-primary {
+    background-color: var(--white);
+    color: var(--gray);
+}
+
+.my-projects .cta-primary:hover {
+    border: solid 1px #fff;
+    background-color: transparent;
+    color: #fff;
+}
+
+/* 4. Featured projects */
+
+.project {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: .75em;
+    background-color: var(--gray);
+    max-height: 300px
+}
+
+
+.project-image {
+    border-radius: .75em 0 0 .75em;
+    width: 30%;
+}
+
+.project-title {
+    font-weight: var(--regular-weight);
+}
+
+a {
+    text-decoration: none;
+    color:unset;
+}
+
+.project-description {
+    padding: 20px;
 }

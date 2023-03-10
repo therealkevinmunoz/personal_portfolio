@@ -1,9 +1,19 @@
 /* 1. Page */
 
+:root {
+    --page-font: 'Jost', sans-serif;
+    --light-weight: 300;
+    --regular-weight: 400;
+    --bold-weight: 500;
+    --extra-bold-weight: 600;
+    --gray: #F3F4F8;
+    --green: #02eb41;
+    --dark-gray: #404252;
+    --white: #FFF;
+}
+
 .about-me {
-    background-image: url("../images/tertiary-background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: var(--gray);
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -13,7 +23,7 @@
 /* 2. Fonts */
 
 .about-me h1 {
-    color: #fff;
+    color: var(--dark-gray);
 }
 
 .about-me-content {
@@ -30,41 +40,26 @@
     border-radius: 5px;
     padding: 20px;
     margin: 10px;
-    background-color: #fff;
+    background-color: var(--white);
 }
 
-/* 3. Buttons */
-
-.about-me .cta-primary
-{
-    align-self: flex-end;
-    background-color: #fff;
-    color: #336699;
-}
-
-.about-me .cta-primary:hover {
-    border: solid 1px #fff;
-    background-color: transparent;
-    color: #fff;
-}
-
-/* 4. Featured Articles */
+/* 3. Featured Articles */
 
 .featured-container {
     display: flex;
+    flex-direction: column;
     gap: 20px;
-    align-items: stretch;
 }
 
-.featured-container a:hover {
-    transform: scale(1.02);
+.featured-content h3 {
+    margin-top: 0;
 }
 
 .article {
     display: flex;
     border: 1px solid #ccc;
     border-radius: .75em;
-    background-color: #fbfcff;
+    background-color: var(--white);
 }
 
 .article-image-1 {
@@ -80,13 +75,13 @@
 
 .article-image-1,
 .article-image-2 {
-    color: #fff;
+    color: var(--white);
     border-radius: .75em 0 0 .75em;
-    width: 100%;
+    width: 200px;
 }
 
 .article-title {
-    font-weight: 700;
+    font-weight: 300;
 }
 
 a {
