@@ -12,6 +12,9 @@
     --green: #02eb41;
     --dark-gray: #404252;
     --white: #FFF;
+    --blue: #6495ED;
+    --orange: #FFBF00;
+    --purple: #CCCCFF;
 }
 
 body {
@@ -114,7 +117,7 @@ nav ul {
 
 .add-links {
     padding: 20px;
-    background-color: var(--gray);
+    background-color: var(--white);
 }
 
 .add-links .main-selection {
@@ -139,11 +142,10 @@ nav ul {
     border-radius: 1em;
     padding: 30px;
     background-color: var(--white);
-    border: 1px solid var(--dark-gray);
+    box-shadow: 0 0 15px rgba(178, 178, 178, 0.419);
 }
 
 .selection-container:hover {
-    box-shadow: 0 0 5px var(--dark-gray);
     cursor: pointer;
 }
 
@@ -282,14 +284,12 @@ textarea {
 .project-content {
     display: flex;
     gap: 30px;
-    flex-direction: column;
     justify-content: center;
-    border: 1px solid #ccc;
+    align-items: stretch;
     border-radius: 5px;
     padding: 20px;
     margin: 10px;
-    background-color: var(--white);
-    max-width: 80%;
+    flex-wrap: wrap;
 }
 
 /* 3. Buttons */
@@ -300,36 +300,57 @@ textarea {
 }
 
 .my-projects .cta-primary:hover {
-    border: solid 1px #fff;
+    border: solid 1px var(--white);
     background-color: transparent;
-    color: #fff;
+    color: var(--white);
 }
 
 /* 4. Featured projects */
 
 .project {
-    display: flex;
-    border: 1px solid #ccc;
+    border: 3px solid var(--white);
     border-radius: .75em;
     background-color: var(--gray);
-    max-height: 300px
 }
 
 
 .project-image {
-    border-radius: .75em 0 0 .75em;
-    width: 30%;
+    border-radius: .75em .75em 0 0;
+    width: 100%;
 }
 
 .project-title {
-    font-weight: var(--regular-weight);
+    font-weight: var(--bold-weight);
 }
 
 a {
     text-decoration: none;
     color:unset;
+    width: 60%;
+    border: none;
 }
 
 .project-description {
-    padding: 20px;
+    padding: 10px;
+}
+
+.tech-stack-container {
+    padding: 10px
+}
+
+.tech-tag {
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+
+.html-tag {
+    background-color: var(--blue);
+}
+
+.css-tag {
+    background-color: var(--orange);
+}
+
+.javascript-tag {
+    background-color: var(--purple);
 }
